@@ -1,0 +1,33 @@
+/*Je suis un comentaire CSS*/
+
+/*Je suis
+*une comentaire
+*multiligne*/
+
+body{
+    background-color: green;
+    color: blueviolet;
+}
+/*ce qui suit ces pour les fonction simple */
+h1{
+    font-size: 80px;
+    color: red;
+    font-style: italic;
+}
+
+p{
+    color: blue;
+    font-weight: bold;
+}
+/*ce qui suis est une fonction complex qui fait un mise en page grouper*/
+h3, h4{
+    color: orange;
+}
+/*voila une facon pour faire une mise en page spécifique grace au id et au class*/
+#p1{
+    color: yellow;
+}
+
+.p1{
+    color: rgb(255, 0, 200);
+}

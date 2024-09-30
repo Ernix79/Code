@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soumettre une Histoire</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="submit.html">Soumettre une Histoire</a>
+            <a href="listen.html">Écouter des Animés</a>
+        </nav>
+        <h1>Soumettre une Histoire</h1>
+    </header>
+
+    <div class="container">
+        <section>
+            <h2>Formulaire de Soumission</h2>
+            <form id="storyForm">
+                <label for="title">Titre de l'Histoire :</label>
+                <input type="text" id="title" name="title" required>
+
+                <label for="author">Auteur :</label>
+                <input type="text" id="author" name="author" required>
+
+                <label for="story">Texte de l'Histoire :</label>
+                <textarea id="story" name="story" rows="10" required></textarea>
+
+                <label for="rights">
+                    <input type="checkbox" id="rights" name="rights" required>
+                    J'accepte que mon histoire soit publiée avec des droits d'auteur réservés.
+                </label>
+
+                <button type="submit">Soumettre</button>
+            </form>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Site de Littérature et Animés. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        document.getElementById('storyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Histoire soumise ! (Fonctionnalité backend non implémentée ici)');
+        });
+    </script>
+</body>
+</html>

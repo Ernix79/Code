@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site de Littérature et Audio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 1rem 0;
+            text-align: center;
+        }
+        nav a {
+            color: #fff;
+            margin: 0 1rem;
+            text-decoration: none;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        .form-section, .audio-section {
+            background-color: #fff;
+            padding: 1rem;
+            margin-bottom: 2rem;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 1rem;
+        }
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            border: none;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+        }
+        .audio-list {
+            list-style: none;
+            padding: 0;
+        }
+        .audio-list li {
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="audio.html">Audio</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <h1>Site de Littérature et Audio</h1>
+    </header>
+
+    <div class="container">
+        <!-- Section pour publier des histoires -->
+        <section class="form-section">
+            <h2>Publiez Votre Histoire</h2>
+            <form id="storyForm">
+                <textarea id="storyContent" placeholder="Écrivez votre histoire ici..."></textarea>
+                <input type="submit" value="Publier">
+            </form>
+            <div id="storyList">
+                <!-- Les histoires publiées apparaîtront ici -->
+            </div>
+        </section>
+
+        <!-- Section pour écouter des histoires animées -->
+        <section class="audio-section">
+            <h2>Écoutez des Histoires Animées</h2>
+            <ul class="audio-list" id="audioList">
+                <!-- Les fichiers audio apparaîtront ici -->
+            </ul>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Site de Littérature et Audio. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        // Script pour publier les histoires
+        document.getElementById('storyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const storyContent = document.getElementById('storyContent').value;
+            if (storyContent.trim() === '') {
+                alert('Veuillez écrire une histoire.');
+                return;
+            }
+
+            const storyList = document.getElementById('storyList');
+            const storyItem = document.createElement('div');
+            storyItem.innerHTML = `<h3>Histoire publiée</h3><p>${storyContent}</p>`;
+            storyList.appendChild(storyItem);
+            document.getElementById('storyContent').value = '';
+        });
+
+        // Liste des fichiers audio (remplacez par vos fichiers)
+        const audioFiles = [
+            { title: 'Histoire 1', url: 'audio/histoire1.mp3' },
+            { title: 'Histoire 2', url: 'audio/histoire2.mp3' }
+        ];
+
+        const audioList = document.getElementById('audioList');
+        audioFiles.forEach(file => {
+            const listItem = document.createElement('li');
+            listItem.innerHTML = `<strong>${file.title}</strong> <audio controls><source src="${file.url}" type="audio/mpeg">Votre navigateur ne prend pas en charge l'élément audio.</audio>`;
+            audioList.appendChild(listItem);
+        });
+    </script>
+</body>
+</html>

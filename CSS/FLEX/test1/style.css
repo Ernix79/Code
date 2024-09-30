@@ -1,0 +1,26 @@
+body{
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    background-color: rgb(59, 58, 58);
+}
+
+.container{
+    height: 600px;
+    width: 600px;
+    background-color: black;
+    border: 2px dashed white;
+    margin: 100px auto;
+}
+
+.item{
+    /*height: 65px;
+    width: 100px;*/
+    background-color: rgb(255, 217, 0);
+    border-radius: 10px;
+    border: 2px solid white;
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+    /*padding-top: 35px;*/
+    text-align: center;
+}

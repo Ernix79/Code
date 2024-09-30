@@ -1,0 +1,20 @@
+.div-para{
+    background-color: green;
+    font-weight: bold;
+}
+
+.span-trois{
+    color: blue;
+    font-family: "Protest Guerrilla", sans-serif;
+}
+/*voici comment changer la tailler de la police*/
+h2{
+    font-size: 100px;
+    font-style: italic;
+    font-weight: lighter;
+}
+
+h3{
+    font-size: 200%;
+    font-weight: 900;
+}
