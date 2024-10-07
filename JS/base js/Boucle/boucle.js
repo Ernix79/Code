@@ -27,5 +27,3 @@ let i = "";
 for(i = 0; i < 10; i++){
     alert("i contient la valeur : " + i);
 }
-
-alert("allo");
